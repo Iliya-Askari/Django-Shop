@@ -162,3 +162,5 @@ cython_debug/
 
 # ignore database 
 postgres/data/*
+*.pid
+/postgres/data/pg_xact
