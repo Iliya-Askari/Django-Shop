@@ -15,18 +15,18 @@ services:
 
   backend:
     container_name: django
-    build :
-    context: .
-    dockerfile: ./dockerfiles/dev/django/Dockerfile
+    build:
+      context: .
+      dockerfile: ./dockerfiles/dev/django/Dockerfile
     volumes:
-      - ./core:usr/src/app
+      - ./core:/usr/src/app
     working_dir: /usr/src/app
     command: django-admin startproject core .
     environment:
-    - DEBUG=TRUE
+      - DEBUG=TRUE
     restart: always
-    depends_on :
-    - db
+    depends_on:
+      - db
 
   smtp4dev:
     image: rnwood/smtp4dev:v3
