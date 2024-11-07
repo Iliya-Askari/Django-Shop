@@ -41,7 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'website'
+
+    # need app
+    'website',
+    'accounts'
 ]
 
 MIDDLEWARE = [
@@ -156,3 +159,6 @@ else:
     EMAIL_USE_SSL = True
     EMAIL_HOST_USER = 'your_email@example.com'
     EMAIL_HOST_PASSWORD = 'your_password'
+
+
+AUTH_USER_MODEL = 'accounts.User'
